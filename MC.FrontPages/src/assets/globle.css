@@ -1,0 +1,80 @@
+@import url("//unpkg.com/element-ui@2.15.3/lib/theme-chalk/index.css");
+.a{
+  text-decoration:none;
+  color:rgba(0, 0, 0, 0.7);
+}
+.a-font{
+  color:rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+.a-button:hover{
+  color: #409EFF;
+}
+.b-button:hover{
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+.b-font{
+  color:rgba(0, 0, 0, 0.5);
+}
+.row-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.col-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.a-col-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .12), 0 0 3px rgba(0, 0, 0, .04);
+}
+.a-col-con-no-shadow{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.a-row-con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .12), 0 0 3px rgba(0, 0, 0, .04);
+}
+.b-col-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.b-row-con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.paragraph{
+  text-indent:2em;
+  margin: 10px
+}
+.line{
+  size:3px;
+  width:100%;
+  color:rgba(0, 0, 0, .01);
+  margin: 30px 0;
+
+}

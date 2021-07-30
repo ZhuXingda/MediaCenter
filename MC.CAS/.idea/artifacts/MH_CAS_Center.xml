@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MH.CAS.Center">
+    <output-path>$PROJECT_DIR$/out/artifacts/MH_CAS_Center</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.2.6" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-pool2:2.6.2" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:2.0.6" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.7" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.30" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.8" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.8" />
+          <element id="library" level="project" name="Maven: redis.clients:jedis:3.3.0" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="MC.CAS" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

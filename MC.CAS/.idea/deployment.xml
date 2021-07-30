@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="zxd_server" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="zxd_server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/opt/tomcat" local="$PROJECT_DIR$" web="http://10.6.11.250:8083" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

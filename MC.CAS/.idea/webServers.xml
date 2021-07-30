@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0b9e2ca7-5d85-4355-ab14-8dcd9620e523" name="zxd_server" url="http://10.6.11.250:8083">
+        <fileTransfer rootFolder="/opt/tomcat" accessType="SFTP" host="10.6.11.250" port="22" sshConfigId="34857092-bb30-49a7-ab27-cdb6f5fa0870" sshConfig="zhuxingda@10.6.11.250:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
