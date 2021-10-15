@@ -3,30 +3,9 @@
     <Header/>
     <div class="row-body">
       <SideBar v-on:content_change="content_change" v-bind:chosen_option="this.index" style="width: 200px"/>
-<!--      <div style="width: 900px">
-        <transition name="el-fade-in">
-          <DisplayTable v-if="index===1" columnStyle="index"/>
-        </transition>
-        <transition name="el-fade-in">
-          <DisplayRow v-on:content_forward="content_forward" v-on:content_backward="content_backward" v-if="index===2" columnStyle="index"/>
-        </transition>
-        <transition name="el-fade-in">
-          <DisplayTable v-if="index===3" columnStyle="origin"/>
-        </transition>
-        <transition name="el-fade-in">
-          <DisplayTable v-if="index===4" columnStyle="theater"/>
-        </transition>
-        <transition name="el-fade-in">
-          <DisplayTable v-if="index===5" columnStyle="live"/>
-        </transition>
-        <transition name="el-fade-in">
-          <Login v-if="index===6"/>
-        </transition>
-        <transition name="el-fade-in">
-          <VideoPage v-if="index===8" columnStyle="index"/>
-        </transition>
-      </div>-->
-      <router-view></router-view>
+      <div style="width: 900px">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>

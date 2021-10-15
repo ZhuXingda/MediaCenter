@@ -28,41 +28,41 @@
     </div>
     <el-divider></el-divider>
     <div class="b-col-con" style="align-items: start; margin: 0 20px 20px; width: 80%">
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===1 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===1 }">
         <i class="el-icon-house bar-icon"></i>
         <a>热门推荐</a>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/DisplayRow')" v-bind:class="{ 'c-chosen' : chosen_option===2 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayRow')" v-bind:class="{ 'c-chosen' : chosen_option===2 }">
         <i class="el-icon-bell bar-icon"></i>
         <a>全部关注</a>
         <router-link to="/DisplayRow"/>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===3 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===3 }">
         <i class="el-icon-video-play bar-icon"></i>
         <a>原创视频</a>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===4 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===4 }">
         <i class="el-icon-monitor bar-icon"></i>
         <a>电影电视剧</a>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===5 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===5 }">
         <i class="el-icon-video-camera bar-icon"></i>
         <a>直播</a>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/DisplayRow')" v-bind:class="{ 'c-chosen' : chosen_option===6 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayRow')" v-bind:class="{ 'c-chosen' : chosen_option===6 }">
         <i class="el-icon-message bar-icon"></i>
         <a>消息</a>
         <el-badge v-if="message_count>0" class="mark" type="primary" :max="99" :value="message_count" />
       </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="this.$router.push('/Login')" v-bind:class="{ 'c-chosen' : chosen_option===7 }">
+      <el-button type="text" class="c-button b-row-con" @click="$router.push('/Login')" v-bind:class="{ 'c-chosen' : chosen_option===7 }">
         <i class="el-icon-user bar-icon"></i>
         <a>个人中心</a>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" v-show="login_status>0" @click="this.$router.push('/Login')">
+      <el-button type="text" class="c-button b-row-con" v-show="login_status>0" @click="$router.push('/Login')">
         <i class="el-icon-refresh bar-icon"></i>
         <a>切换账号</a>
       </el-button>
-      <el-button type="text" class="c-button b-row-con" v-show="login_status<1" @click="this.$router.push('/Login')">
+      <el-button type="text" class="c-button b-row-con" v-show="login_status<1" @click="$router.push('/Login')">
         <i class="el-icon-refresh bar-icon"></i>
         <a>登录/注册</a>
       </el-button>
@@ -84,28 +84,12 @@ export default {
       fol_count: 0,
       sub_count: 0,
       pub_count: 0,
-      user_avatar: ''
+      user_avatar: '',
+      chosen_option : '/index'
     }
   },
-  props:[
-    'chosen_option'
-  ],
   methods:{
-    side_bar_change(index){
-      this.chosen_option = index;
-      this.$emit('content_change', this.chosen_option)
-      if(index===6){
-        this.message_count=0;
-      }
-      if(index===8){
-        index = 7;
-        this.login_status=0
-      }
-      if(index===7){
-        index = 8
-        this.login_status=1
-      }
-    },
+
     logout(){
       this.$alert('确定退出当前账号？', '切换账号', {
         confirmButtonText: '确定',

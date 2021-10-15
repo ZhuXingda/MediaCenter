@@ -259,7 +259,8 @@ export default {
 
 <style scoped>
 .a-col-con{
-  padding: 50px;
+  margin: 20px;
+  padding: 40px 20px;
 }
 .title{
   font-size: 20px;
