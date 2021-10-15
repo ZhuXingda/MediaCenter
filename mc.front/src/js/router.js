@@ -26,6 +26,10 @@ const routes = [
   {
     path: "/VideoPage",
     component: VideoPage
+  },
+  {
+    path:"/",
+    component: DisplayTable
   }
 ]
 

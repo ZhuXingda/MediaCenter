@@ -1,9 +1,9 @@
 <template>
   <div class="page">
-<!--    <Header/>
+    <Header/>
     <div class="row-body">
       <SideBar v-on:content_change="content_change" v-bind:chosen_option="this.index" style="width: 200px"/>
-      <div style="width: 900px">
+<!--      <div style="width: 900px">
         <transition name="el-fade-in">
           <DisplayTable v-if="index===1" columnStyle="index"/>
         </transition>
@@ -25,13 +25,9 @@
         <transition name="el-fade-in">
           <VideoPage v-if="index===8" columnStyle="index"/>
         </transition>
-      </div>
-    </div>-->
-    <p>
-      <router-link to="/DisplayTable">DisplayTable</router-link>
-      <router-link to="/DisplayRow">DisplayRow</router-link>
-    </p>
-    <router-view></router-view>
+      </div>-->
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
