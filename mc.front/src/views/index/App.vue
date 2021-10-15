@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <Header/>
-<!--    <div class="row-body">
+<!--    <Header/>
+    <div class="row-body">
       <SideBar v-on:content_change="content_change" v-bind:chosen_option="this.index" style="width: 200px"/>
       <div style="width: 900px">
         <transition name="el-fade-in">
@@ -27,8 +27,10 @@
         </transition>
       </div>
     </div>-->
-    <router-link to="/DisplayTable">DisplayTable</router-link>
-    <router-link to="/DisplayRow">DisplayRow</router-link>
+    <p>
+      <router-link to="/DisplayTable">DisplayTable</router-link>
+      <router-link to="/DisplayRow">DisplayRow</router-link>
+    </p>
     <router-view></router-view>
   </div>
 </template>
