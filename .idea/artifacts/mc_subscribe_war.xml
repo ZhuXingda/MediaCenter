@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mc.subscribe:war">
+    <output-path>$PROJECT_DIR$/mc.subscribe/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mc.subscribe</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mc.subscribe-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mc.subscribe:war exploded" />
+    </root>
+  </artifact>
+</component>

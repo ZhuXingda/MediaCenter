@@ -1,4 +1,0 @@
-[7616] 26 Jul 22:06:50.533 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-[7616] 26 Jul 22:06:50.534 # Redis version=5.0.10, bits=64, commit=1c047b68, modified=0, pid=7616, just started
-[7616] 26 Jul 22:06:50.534 # Configuration loaded
-[7616] 26 Jul 22:06:50.538 # Could not create server TCP listening socket 127.0.0.1:6379: bind: 操作成功完成。

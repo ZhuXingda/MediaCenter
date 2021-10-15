@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mc.video.service.mapper.VideoSetInfoMapper">
+    <resultMap id="videoSetDetailInfoDao" type="mc.video.service.dao.VideoSetDetailInfoDao">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="describe" column="video_describe"/>
+        <result property="totalCount" column="total_count"/>
+        <result property="coverImgSrc" column="cover_img_src"/>
+        <result property="publishDate" column="publish_date"/>
+        <result property="uploadDate" column="upload_date"/>
+    </resultMap>
+
+    <resultMap id="videoSetBriefInfoDao" type="mc.video.service.dao.VideoSetBriefInfoDao">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="coverImgSrc" column="cover_img_src"/>
+        <result property="publishDate" column="publish_date"/>
+        <result property="uploadDate" column="upload_date"/>
+        <result property="totalCount" column="total_count"/>
+    </resultMap>
+
+    <select id="getVideoSetBriefInfoListByIdSet" resultMap="videoSetBriefInfoDao">
+        SELECT `id`, `title`, `cover_img_src` ,`publish_date`, `upload_date`, `total_count`
+        FROM video_set_info
+        WHERE id IN
+        <foreach collection="idSet" item="id" separator="," open="(" close=")">
+            id
+        </foreach>
+    </select>
+</mapper>

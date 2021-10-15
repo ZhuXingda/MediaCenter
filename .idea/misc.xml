@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ASMPluginConfiguration">
+    <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
+    <groovy codeStyle="LEGACY" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/mc.cas" />
+    <file type="web" url="file://$PROJECT_DIR$/mc.comment" />
+    <file type="web" url="file://$PROJECT_DIR$/mc.live" />
+    <file type="web" url="file://$PROJECT_DIR$/mc.message" />
+    <file type="web" url="file://$PROJECT_DIR$/mc.subscribe" />
+    <file type="web" url="file://$PROJECT_DIR$/mc.user" />
+    <file type="web" url="file://$PROJECT_DIR$/mc.video" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mc.cas/pom.xml" />
+        <option value="$PROJECT_DIR$/mc.video/pom.xml" />
+        <option value="$PROJECT_DIR$/mc.comment/pom.xml" />
+        <option value="$PROJECT_DIR$/mc.live/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

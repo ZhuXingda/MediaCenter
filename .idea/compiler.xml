@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mc.message" />
+        <module name="mc.cas" />
+        <module name="mc.subscribe" />
+        <module name="mc.live" />
+        <module name="mc.user" />
+        <module name="mc.video" />
+        <module name="mc.comment" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="mc.cas" target="8" />
+      <module name="mc.comment" target="8" />
+      <module name="mc.live" target="8" />
+      <module name="mc.message" target="8" />
+      <module name="mc.subscribe" target="8" />
+      <module name="mc.user" target="8" />
+      <module name="mc.video" target="8" />
+      <module name="MideaCenter" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

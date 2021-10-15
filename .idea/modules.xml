@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MideaCenter.iml" filepath="$PROJECT_DIR$/.idea/MideaCenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.cas/mc.cas.iml" filepath="$PROJECT_DIR$/mc.cas/mc.cas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.comment/mc.comment.iml" filepath="$PROJECT_DIR$/mc.comment/mc.comment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.live/mc.live.iml" filepath="$PROJECT_DIR$/mc.live/mc.live.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.message/mc.message.iml" filepath="$PROJECT_DIR$/mc.message/mc.message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.subscribe/mc.subscribe.iml" filepath="$PROJECT_DIR$/mc.subscribe/mc.subscribe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.user/mc.user.iml" filepath="$PROJECT_DIR$/mc.user/mc.user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mc.video/mc.video.iml" filepath="$PROJECT_DIR$/mc.video/mc.video.iml" />
+    </modules>
+  </component>
+</project>

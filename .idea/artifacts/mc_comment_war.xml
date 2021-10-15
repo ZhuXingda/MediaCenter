@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mc.comment:war">
+    <output-path>$PROJECT_DIR$/mc.comment/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mc.comment</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mc.comment-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mc.comment:war exploded" />
+    </root>
+  </artifact>
+</component>
