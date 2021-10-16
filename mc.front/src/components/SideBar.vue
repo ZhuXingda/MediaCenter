@@ -27,44 +27,10 @@
       </div>
     </div>
     <el-divider></el-divider>
-    <div class="b-col-con" style="align-items: start; margin: 0 20px 20px; width: 80%">
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===1 }">
-        <i class="el-icon-house bar-icon"></i>
-        <a>热门推荐</a>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayRow')" v-bind:class="{ 'c-chosen' : chosen_option===2 }">
-        <i class="el-icon-bell bar-icon"></i>
-        <a>全部关注</a>
-        <router-link to="/DisplayRow"/>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===3 }">
-        <i class="el-icon-video-play bar-icon"></i>
-        <a>原创视频</a>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===4 }">
-        <i class="el-icon-monitor bar-icon"></i>
-        <a>电影电视剧</a>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayTable')" v-bind:class="{ 'c-chosen' : chosen_option===5 }">
-        <i class="el-icon-video-camera bar-icon"></i>
-        <a>直播</a>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/DisplayRow')" v-bind:class="{ 'c-chosen' : chosen_option===6 }">
-        <i class="el-icon-message bar-icon"></i>
-        <a>消息</a>
-        <el-badge v-if="message_count>0" class="mark" type="primary" :max="99" :value="message_count" />
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" @click="$router.push('/Login')" v-bind:class="{ 'c-chosen' : chosen_option===7 }">
-        <i class="el-icon-user bar-icon"></i>
-        <a>个人中心</a>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" v-show="login_status>0" @click="$router.push('/Login')">
-        <i class="el-icon-refresh bar-icon"></i>
-        <a>切换账号</a>
-      </el-button>
-      <el-button type="text" class="c-button b-row-con" v-show="login_status<1" @click="$router.push('/Login')">
-        <i class="el-icon-refresh bar-icon"></i>
-        <a>登录/注册</a>
+    <div class="b-col-con" style="align-items: start; margin: 0 20px 20px; width: 80%" v-for="option in side_bar_options">
+      <el-button type="text" class="c-button b-row-con" @click="option_select(option)" v-bind:class="{ 'c-chosen' : chosen_option===option.router_name }">
+        <i class="bar-icon" v-bind:class="option.option_icon"></i>
+        <a>{{ option.option_name }}</a>
       </el-button>
     </div>
   </div>
@@ -78,6 +44,46 @@ export default {
   name: "SideBar",
   data() {
     return {
+      side_bar_options:[
+        {
+          router_name:'index',
+          option_icon:'el-icon-house',
+          option_name:'热门推荐'
+        },
+        {
+          router_name:'subscribe',
+          option_icon:'el-icon-bell',
+          option_name:'全部关注'
+        },
+        {
+          router_name:'origin',
+          option_icon:'el-icon-video-play',
+          option_name:'原创视频'
+        },
+        {
+          router_name:'movie',
+          option_icon:'el-icon-monitor',
+          option_name:'电影电视剧'
+        },
+        {
+          router_name:'live',
+          option_icon:'el-icon-video-camera',
+          option_name:'直播'
+        },
+        {
+          router_name:'message',
+          option_icon:'el-icon-message',
+          option_name:'消息'
+        },
+        {
+          router_name:'personal',
+          option_icon:'el-icon-user',
+          option_name:'个人中心',
+          router_params:{
+            user_id:'1234132451'
+          }
+        }
+      ],
       message_count : 200,
       login_status : 0,
       user_name: '未登录',
@@ -85,11 +91,17 @@ export default {
       sub_count: 0,
       pub_count: 0,
       user_avatar: '',
-      chosen_option : '/index'
+      chosen_option : 'index'
     }
   },
   methods:{
-
+    option_select(option){
+      this.$router.push({
+        name: option.router_name,
+        params: option.router_params
+      })
+      this.chosen_option = option.router_name
+    },
     logout(){
       this.$alert('确定退出当前账号？', '切换账号', {
         confirmButtonText: '确定',

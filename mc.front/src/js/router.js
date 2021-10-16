@@ -12,20 +12,43 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    name:"index",
     path:"/DisplayTable",
     component: DisplayTable
   },
   {
-    path: "/DisplayRow",
+    name:"index",
+    path:"/DisplayTable",
     component: DisplayRow
   },
   {
+    name: "origin",
+    path: "/DisplayRow",
+    component: DisplayTable
+  },
+  {
+    name: "movie",
+    path: "/DisplayRow",
+    component: DisplayTable
+  },
+  {
+    name: "live",
+    path: "/DisplayRow",
+    component: DisplayTable
+  },
+  {
+    name:"message",
+    path:"/DisplayTable",
+    component: DisplayRow
+  },
+  {
+    name: "personal",
     path: "/Login",
     component: Login
   },
   {
-    path: "/VideoPage",
-    component: VideoPage
+    path: "/",
+    component: DisplayTable
   }
 ]
 

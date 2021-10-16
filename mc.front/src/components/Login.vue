@@ -92,6 +92,7 @@ export default {
   },
   mounted() {
     this.check_img_refresh()
+    console.log(this.$route.params)
   },
   methods:{
     tab_click (){
