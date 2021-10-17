@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Recommend from "./Recommend";
-import Video from "./Video";
+import Recommend from "../components/Recommend";
+import Video from "../components/Video";
 import '../assets/globle.css';
 
 export default {

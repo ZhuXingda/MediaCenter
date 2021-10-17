@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Header from "../../components/Header"
-import Login from "../../components/Login";
+import Header from "../../subpage/Header"
+import Login from "../../subpage/Login";
 export default {
   name: 'App',
   components: {

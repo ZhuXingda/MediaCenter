@@ -11,12 +11,12 @@
 </template>
 
 <script>
-import Header from "../../components/Header"
+import Header from "../../subpage/Header"
 import DisplayTable from "../../components/DisplayTable";
 import DisplayRow from "../../components/DisplayRow";
-import SideBar from "../../components/SideBar";
-import Login from "../../components/Login";
-import VideoPage from "../../components/VideoPage";
+import SideBar from "../../subpage/SideBar";
+import Login from "../../subpage/Login";
+import VideoPage from "../../subpage/VideoPage";
 
 export default {
   name: 'App',

@@ -14,7 +14,7 @@
       </dt>
     </dl>
     <el-divider></el-divider>
-    <el-pagination v-show="nav_show()" layout="prev, pager, next, jumper" :total="page_total" :current-page="page_current" v-on:current-change="change_page"></el-pagination>
+    <el-pagination v-show="nav_show()" layout="prev, pager, next, jumper" :total="page_total" :current-page="page_current" v-on:current-change="change_page"/>
   </div>
 </template>
 

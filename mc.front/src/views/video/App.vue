@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Header from "../../components/Header"
-import VideoPage from "../../components/VideoPage";
+import Header from "../../subpage/Header"
+import VideoPage from "../../subpage/VideoPage";
 export default {
   name: 'App',
   components: {

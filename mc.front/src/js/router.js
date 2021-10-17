@@ -4,8 +4,9 @@ import VueRouter from "vue-router";
 // 引入组件
 import DisplayTable from "../components/DisplayTable";
 import DisplayRow from "../components/DisplayRow";
-import Login from "../components/Login";
-import VideoPage from "../components/VideoPage";
+import Login from "../subpage/Login";
+import VideoPage from "../subpage/VideoPage";
+import Index from "../subpage"
 
 // 要告诉 vue 使用 vueRouter
 Vue.use(VueRouter);
@@ -13,13 +14,13 @@ Vue.use(VueRouter);
 const routes = [
   {
     name:"index",
-    path:"/DisplayTable",
-    component: DisplayTable
+    path:"/",
+    component: Index
   },
   {
-    name:"index",
-    path:"/DisplayTable",
-    component: DisplayRow
+    name: "subscribe",
+    path: "/DisplayTable",
+    component: DisplayTable
   },
   {
     name: "origin",
@@ -45,10 +46,6 @@ const routes = [
     name: "personal",
     path: "/Login",
     component: Login
-  },
-  {
-    path: "/",
-    component: DisplayTable
   }
 ]
 
