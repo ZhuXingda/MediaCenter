@@ -1,7 +1,7 @@
 <template>
   <div class="a-row-con box-shadow header">
     <div class="b-row-con" style="height: 40px; width: 15%;">
-      <a :href="index_link" class="b-font a-button" style="font-size: 24px">
+      <a :href="index_link" class="c-font a-button" style="font-size: 24px">
         <b>(゜-゜)つ凸</b>
       </a>
     </div>

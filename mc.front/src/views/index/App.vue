@@ -13,7 +13,7 @@
 <script>
 import Header from "../../subpage/Header"
 import DisplayTable from "../../components/DisplayTable";
-import DisplayRow from "../../components/DisplayRow";
+import Subscription from "../../subpage/Subscription";
 import SideBar from "../../subpage/SideBar";
 import Login from "../../subpage/Login";
 import VideoPage from "../../subpage/VideoPage";
@@ -24,7 +24,7 @@ export default {
     VideoPage,
     Header,
     DisplayTable,
-    DisplayRow,
+    Subscription,
     SideBar,
     Login
   },

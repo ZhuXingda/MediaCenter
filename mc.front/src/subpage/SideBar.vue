@@ -1,16 +1,16 @@
 <template>
   <div class="a-col-con box-shadow">
     <div class="b-col-con">
-      <el-button type="text" style="margin: 10px;padding: 0">
+      <button style="margin: 10px;padding: 0">
         <div class="c-row-con" style="justify-content: center" v-on:click="side_bar_change(7)">
           <div class="avatar-wrapper">
             <img class="avatar" :src="this.user_avatar" v-if="login_status===1"/>
-            <i class="el-icon-user b-font" style="font-size: 25px" v-if="login_status===0"></i>
+            <i class="el-icon-user c-font" style="font-size: 25px" v-if="login_status===0"></i>
             <div class="avatar-mask"></div>
           </div>
-          <div class="b-font a-button" style="padding-left: 10px">{{ user_name }}</div>
+          <div class="c-font a-button" style="padding-left: 10px">{{ user_name }}</div>
         </div>
-      </el-button>
+      </button>
       <div class="b-row-con">
         <a class="c-col-con a-font a-button" href="http://www.baidu.com">
           <span style="font-size: 14px; font-weight: bold">{{ sub_count }}</span>
@@ -28,10 +28,11 @@
     </div>
     <el-divider></el-divider>
     <div class="b-col-con" style="align-items: start; margin: 0 20px 20px; width: 80%" v-for="option in side_bar_options">
-      <el-button type="text" class="c-button b-row-con" @click="option_select(option)" v-bind:class="{ 'c-chosen' : chosen_option===option.router_name }">
+      <button type="text" class="c-button b-row-con" @click="option_select(option)"
+                 :class="{ 'c-chosen' : chosen_option===option.router_name }">
         <i class="bar-icon" v-bind:class="option.option_icon"></i>
         <a>{{ option.option_name }}</a>
-      </el-button>
+      </button>
     </div>
   </div>
 </template>
@@ -65,11 +66,11 @@ export default {
           option_icon:'el-icon-monitor',
           option_name:'电影电视剧'
         },
-        {
+        /*{
           router_name:'live',
           option_icon:'el-icon-video-camera',
           option_name:'直播'
-        },
+        },*/
         {
           router_name:'message',
           option_icon:'el-icon-message',
@@ -125,10 +126,6 @@ export default {
   top: 80px;
   margin-top: 20px;
   padding: 10px 5px;
-}
-.c-chosen{
-  color: #409EFF;
-  background-color: #F2F6FC;
 }
 .c-button{
   width: 100%;

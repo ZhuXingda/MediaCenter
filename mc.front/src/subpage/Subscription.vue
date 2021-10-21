@@ -1,66 +1,64 @@
 <template>
   <div class="a-row-con">
-    <div>
-      <div class="b-col-con box-shadow" v-for="item in recommend_videos" v-on:scroll="load" >
-        <el-button type="text" href='/video' style="padding: 0;margin: 0 20px 20px" @click="content_forward(8)">
+    <div style="width: 810px">
+      <div class="b-col-con box-shadow" v-for="update in updates" @scroll="loadMore">
+        <button style="padding: 0;margin: 0 20px 20px" @click="content_forward(8)">
           <div class="c-row-con">
             <div class="avatar-wrapper">
               <img class="avatar" src="https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto"/>
               <div class="avatar-mask"></div>
             </div>
             <div class="c-col-con" style="margin-left: 10px">
-              <span class="b-font a-button" style="margin-bottom: 5px">{{ item.upLoader }}</span>
-              <span class="a-font">{{item.upLoadTime}}</span>
+              <span class="c-font a-button" style="margin-bottom: 5px">{{ update.upLoader }}</span>
+              <span class="a-font">{{update.upLoadTime}}</span>
             </div>
           </div>
-        </el-button>
-        <a href="http://www.baidu.com" style="text-decoration:none;">
-          <div class="c-row-con" v-bind:href="video_href_build(item.id)" style="margin: 0 60px 20px;align-items: start">
-            <div  style="width: 250px; height:160px; position:relative">
-              <img class="img" v-bind:src="/*cover_img_src_build(item.cover)*/item.cover">
-              <div class="img-mask"></div>
-            </div>
-            <div class="c-col-con" style="margin: 20px;align-items: start;width: 400px">
-              <a class="b-font a-button">题目题目题目题目题目题目题目题目题目题目题目题目题目</a>
-              <div class="a-font description" style="font-size: 14px; margin-top: 40px;width: 100%">{{ item.description }}</div>
-            </div>
+        </button>
+        <a href="http://www.baidu.com" :href="video_href_build(update.id)" class="c-row-con" id="update_content">
+          <div id="img-wrapper">
+            <img class="img" v-bind:src="/*cover_img_src_build(update.cover)*/update.cover">
+            <div class="img-mask"></div>
+          </div>
+          <div class="c-col-con" id="info-wrapper">
+            <a class="c-font a-button">{{ update.title }}</a>
+            <div class="a-font description" style="margin-top: 20px; font-size: 14px">{{ update.description }}</div>
           </div>
         </a>
       </div>
-      <div class="b-row-con b-font"
-           style="justify-content:center;margin-bottom: 30px;font-size: 30px">
+      <div class="b-row-con c-font loading">
         <i class="el-icon-loading"></i>
       </div>
     </div>
-    <transition name="el-fade-in-linear">
-      <div class="back-up-wrapper" v-show="back_up_show">
-        <el-button class="box-shadow c-row-con"
-                   icon="el-icon-top"
-                   id="back-up-button"
-                   style="justify-content: center;font-weight: bold; font-size: 20px"
-                   @click="back_up">
-        </el-button>
-      </div>
-    </transition>
+    <BackUpButton :back_up_show="back_up_show"/>
   </div>
 </template>
 
 <script>
 import '../assets/globle.css'
+import BackUpButton from "../components/BackUpButton";
 
 const SERVICE_URL = '/video'
 
 export default {
-  name: "DisplayRow",
+  name: "Subscription",
+  components: {BackUpButton},
   data() {
     return {
       forward_index: 8,
       stop_scroll: false,
       back_up_show: false,
-      recommend_videos: [
+      updates: [
         {
           id:1,
-          title:'aaaaaaaaaaaaa',
+          title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
+          cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
+          upLoader:'观察者网',
+          upLoadTime: '3分钟以前',
+          description:'adfasdfsadfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋adfasdfasdf大厦里看风景'
+        },
+        {
+          id:1,
+          title:'观其由于第2313期-擦防晒邓',
           cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
           upLoader:'观察者网',
           upLoadTime: '3分钟以前',
@@ -68,7 +66,7 @@ export default {
         },
         {
           id:1,
-          title:'aaaaaaaaaaaaa',
+          title:'观其由于第2313期',
           cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
           upLoader:'观察者网',
           upLoadTime: '3分钟以前',
@@ -76,7 +74,7 @@ export default {
         },
         {
           id:1,
-          title:'aaaaaaaaaaaaa',
+          title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
           cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
           upLoader:'观察者网',
           upLoadTime: '3分钟以前',
@@ -84,7 +82,7 @@ export default {
         },
         {
           id:1,
-          title:'aaaaaaaaaaaaa',
+          title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
           cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
           upLoader:'观察者网',
           upLoadTime: '3分钟以前',
@@ -92,7 +90,7 @@ export default {
         },
         {
           id:1,
-          title:'aaaaaaaaaaaaa',
+          title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
           cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
           upLoader:'观察者网',
           upLoadTime: '3分钟以前',
@@ -100,15 +98,7 @@ export default {
         },
         {
           id:1,
-          title:'aaaaaaaaaaaaa',
-          cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
-          upLoader:'观察者网',
-          upLoadTime: '3分钟以前',
-          description:'adfasdfsadfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋adfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋adfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋adfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋adfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋adfasdfasdf大厦里看风景阿萨德联发科静安寺蝶恋蜂狂骄傲斯洛伐克静安寺蝶恋蜂狂静安寺代理费喀fasdfasfasdfasdfffffffffffffffffffffffffffffffffffffffffffff什东路代付款萨拉副科级发动机打算理发空间的'
-        },
-        {
-          id:1,
-          title:'aaaaaaaaaaaaa',
+          title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
           cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
           upLoader:'观察者网',
           upLoadTime: '3分钟以前',
@@ -121,7 +111,7 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll',this.load)
+    window.addEventListener('scroll',this.loadMore)
   },
   methods:{
     content_forward(index){
@@ -134,7 +124,7 @@ export default {
     video_href_build(video_id){
       return "http://www.baidu.com?id="+video_id;
     },
-    load(){
+    loadMore(){
       const scrollTop = document.documentElement.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = document.documentElement.clientHeight;
@@ -146,10 +136,10 @@ export default {
       if(scrollTop+clientHeight+1>scrollHeight){
         setTimeout(() => {
           this.count += 1;
-          this.recommend_videos.push(
+          this.updates.push(
             {
               id:1,
-              title:'aaaaaaaaaaaaa',
+              title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
               cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
               upLoader:'观察者网'+this.count,
               upLoadTime: '3分钟以前',
@@ -157,7 +147,7 @@ export default {
             },
             {
               id:1,
-              title:'aaaaaaaaaaaaa',
+              title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
               cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
               upLoader:'观察者网'+this.count,
               upLoadTime: '3分钟以前',
@@ -165,7 +155,7 @@ export default {
             },
             {
               id:1,
-              title:'aaaaaaaaaaaaa',
+              title:'观其由于第2313期-擦防晒邓弗里斯达芙妮考虑到可能发案例',
               cover:'https://img1.baidu.com/it/u=1853996003,3269176606&fm=26&fmt=auto',
               upLoader:'观察者网'+this.count,
               upLoadTime: '3分钟以前',
@@ -174,21 +164,7 @@ export default {
           )
         },1000)
       }
-    },
-    back_up(){
-      document.getElementById('back-up-button').blur()
-      let scrollTop = document.documentElement.scrollTop;
-      move_up(scrollTop)
     }
-  }
-}
-function move_up(scrollTop){
-  if(scrollTop>0){
-    scrollTop=Math.max(scrollTop-500,0)
-    setTimeout(()=>{
-      document.documentElement.scrollTop=scrollTop
-      move_up(scrollTop)
-    },5)
   }
 }
 </script>
@@ -199,22 +175,25 @@ function move_up(scrollTop){
 }
 .b-col-con{
   margin: 20px;
-  padding: 20px;
+  padding: 30px;
   z-index: 300;
   align-items: start;
 }
-::-webkit-scrollbar {
-  display: none;
+#update_content{
+  justify-content: space-between;
+  padding: 0 40px;
+  height:140px;
 }
-.back-up-wrapper{
-  position: sticky;
-  position: -webkit-sticky;
-  top: 85%;
-  margin-left: 40px;
+#img-wrapper{
+  width: 250px;
+  position:relative;
+  height: 100%
 }
-#back-up-button{
-  border-radius: 25px;
-  height: 50px;
-  width: 50px;
+#info-wrapper{
+  margin: 20px;
+  align-items: start;
+  justify-content: start;
+  width: 65%;
+  height: 100%
 }
 </style>

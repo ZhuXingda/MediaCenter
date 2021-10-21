@@ -10,7 +10,7 @@
         <div class="avatar-mask"></div>
       </div>
       <div class="c-col-con" style="align-items: start;width: 80%">
-        <div class="a-font a-button single-line-para" style="margin-bottom: 5px">{{ video.title }}</div>
+        <div class="a-font a-button single-line-para" style="margin-bottom: 5px;font-weight: bold">{{ video.title }}</div>
         <div class="a-font a-button single-line-para">{{video.uploader}}</div>
       </div>
     </div>

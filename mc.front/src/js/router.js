@@ -3,10 +3,13 @@ import VueRouter from "vue-router";
 
 // 引入组件
 import DisplayTable from "../components/DisplayTable";
-import DisplayRow from "../components/DisplayRow";
+import Subscription from "../subpage/Subscription";
 import Login from "../subpage/Login";
 import VideoPage from "../subpage/VideoPage";
 import Index from "../subpage"
+import VideoTable from "../subpage/VideoTable";
+import MovieTable from "../subpage/MovieTable";
+import MessagePage from "../subpage/MessagePage";
 
 // 要告诉 vue 使用 vueRouter
 Vue.use(VueRouter);
@@ -19,18 +22,18 @@ const routes = [
   },
   {
     name: "subscribe",
-    path: "/DisplayTable",
-    component: DisplayTable
+    path: "/subscribe",
+    component: Subscription
   },
   {
     name: "origin",
-    path: "/DisplayRow",
-    component: DisplayTable
+    path: "/origin",
+    component: VideoTable
   },
   {
     name: "movie",
-    path: "/DisplayRow",
-    component: DisplayTable
+    path: "/movie",
+    component: MovieTable
   },
   {
     name: "live",
@@ -39,8 +42,8 @@ const routes = [
   },
   {
     name:"message",
-    path:"/DisplayTable",
-    component: DisplayRow
+    path:"/message",
+    component: MessagePage
   },
   {
     name: "personal",

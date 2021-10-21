@@ -6,7 +6,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from "./App.vue";
 import global from '../../components/Common';
 import router from "../../js/router"
-import http from "../../js/http"
+import Utils from "../../js/utils"
+
+Vue.use(Utils)
 Vue.component('font-awesome-icon', global.FontAwesomeIcon)
 Vue.config.productionTip = false
 Vue.use(ElementUI)

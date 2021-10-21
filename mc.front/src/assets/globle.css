@@ -1,14 +1,20 @@
 @import url("//unpkg.com/element-ui@2.15.3/lib/theme-chalk/index.css");
 .a-font{
-  text-decoration:none;
   color: #82858d;
   font-size: 10px;
 }
 .b-font{
-  text-decoration:none;
+  color:#606266;
+  font-weight: bold;
+  font-size: 14px;
+}
+.c-font{
   color:#606266;
   font-weight: bolder;
   font-size: 16px;
+}
+.a-button{
+  cursor:pointer;
 }
 .a-button:hover{
   color: #409EFF;
@@ -22,6 +28,10 @@
   font-size: medium;
 }
 .c-button:hover{
+  color: #409EFF;
+  background-color: #F2F6FC;
+}
+.c-chosen{
   color: #409EFF;
   background-color: #F2F6FC;
 }
@@ -49,8 +59,8 @@
   transition: 0.5s;
 }
 .avatar-wrapper{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: relative;
   display: flex;
   align-items: center;
@@ -90,7 +100,7 @@
 .a-avatar{
   background-color: rgba(0, 0, 0, .1)
 }
-.b-font{
+.c-font{
   color:rgba(0, 0, 0, 0.5);
 }
 .page{
@@ -175,12 +185,10 @@
 }
 .description{
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-height: 19px;
-  height: 38px;
   word-break: break-all
 }
 .paragraph{
@@ -199,7 +207,17 @@
   color:rgba(0, 0, 0, .01);
   margin: 30px 0;
 }
-.ul{
-  margin: 0;
-  padding: 0;
+.loading{
+  justify-content:center;
+  margin-bottom: 30px;
+  font-size: 30px
+}
+a{
+  text-decoration:none;
+}
+button{
+  background: none;
+  border-width: 0;
+  cursor:pointer;
+  border-radius: 6px;
 }
